@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="color-scheme" content="dark">
+		<meta name="description" content="A multi-platform launcher for your anime games">
+		<meta name="author" content="TwintailTeam & Contributors">
+		<meta name="theme-color" content="#12e438">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Twintail Launcher">
+		<meta property="og:url" content="https://twintaillauncher.app">
+
+		<link rel="icon" href="assets/images/logo.png" type="image/png">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/custom.css">
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="https://twintaillauncher.app">
+		<meta name="twitter:title" content="Twintail Launcher">
+		<meta name="twitter:description" content="A multi-platform launcher for your anime games">
+		<title>Twintail Launcher</title>
+	</head>
+	<body>
+	<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary navbar-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand fw-bolder" href="javascript:void(0);">
+				<img src="assets/images/logo.png" alt="" width="32" height="32" class="d-inline-block align-text-top">
+				<span class="text-ttl">Twintail</span> Launcher
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbar">
+				<div class="navbar-nav">
+					<a class="nav-link text-ttl-hover" aria-current="page" href="javascript:void(0);">Home</a>
+					<a class="nav-link text-ttl-hover" href="#main">Download</a>
+					<a class="nav-link text-ttl-hover" href="#features">Features</a>
+					<a class="nav-link text-ttl-hover" href="#faq">FAQ</a>
+					<a class="nav-link text-ttl-hover" href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank">GitHub</a>
+					<a class="nav-link text-ttl-hover" href="https://discord.gg/nDMJDwuj7s" target="_blank">Discord</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="background" id="main">
+			<div class="container-fluid d-flex justify-content-center align-items-center">
+				<div class="row justify-content-center w-100">
+					<div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex flex-column">
+						<div class="d-flex flex-column align-items-center justify-content-center w-100">
+							<h1 class="mb-3 fw-bold"><span class="text-ttl">Twintail</span> Launcher</h1>
+							<h5 class="mb-3">A multi-platform launcher for your anime games</h5>
+							<div class="d-flex align-items-center">
+								<div class="btn-group me-3">
+									<a id="downloadMainBtn" href="javascript:void(0);" class="btn btn-lg btn-ttl" role="button">
+										<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path></svg>
+										Download
+									</a>
+									<button type="button" class="btn btn-lg btn-ttl dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+										<span class="visually-hidden">Toggle Dropdown</span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="/download/linux"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
+											Linux</a></li>
+										<li><a class="dropdown-item" href="/download/windows"><img src="assets/images/windows.png" alt="" width="16" height="16" class="d-inline-block">
+											Windows</a></li>
+									</ul>
+								</div>
+								<a href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" class="btn btn-lg btn-secondary">
+									<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+									GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div id="features" class="bg-ttl bg-gradient text-white p-5">
+		<div class="container">
+			<div class="d-flex justify-content-center align-items-center mb-4">
+				<h1 class="fw-bold">Features</h1>
+			</div>
+			<div class="row g-4 justify-content-center">
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card h-100 border-0 bg-opacity-75 bg-transparent">
+						<div class="card-body text-center">
+							<h5 class="card-title fw-bold">Multi platform</h5>
+							<p class="card-text">TTL supports both Linux and Windows, providing you seamless experience regardless of your Operating System!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card h-100 border-0 bg-opacity-75 bg-transparent">
+						<div class="card-body text-center">
+							<h5 class="card-title fw-bold">Mod support & QoL</h5>
+							<p class="card-text">TTL comes bundled with optional support for using mods for certain set of our supported games (enable "XXMI" to use) while also adding Quality of Life features such as FPS Unlocking!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card h-100 border-0 bg-opacity-75 bg-transparent">
+						<div class="card-body text-center">
+							<h5 class="card-title fw-bold">Advanced configs</h5>
+							<p class="card-text">Control and set your environment variables, prelaunch commands, additional game arguments and more, launcher does not restrict you!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="faq" class="bg-ttl text-white p-5">
+		<div class="container">
+			<div class="d-flex justify-content-center align-items-center mb-4">
+				<h1 class="fw-bold">FAQ</h1>
+			</div>
+			<div class="accordion" id="faqAccordion">
+				<div class="accordion-item border-0 rounded-3">
+					<h2 class="accordion-header" id="faq-heading-1">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
+							What platforms does TTL support?
+						</button>
+					</h2>
+					<div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">
+							We currently support Linux and Windows only. Maybe in the future we add support of macOS.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item mt-3 border-0 rounded-3">
+					<h2 class="accordion-header" id="faq-heading-2">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+							Is TTL free to use?
+						</button>
+					</h2>
+					<div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">
+							TTL is free and open source application and will never be paid software. You can check and give it a star on <a class="text-ttl-hover" href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank">GitHub</a>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item mt-3 border-0 rounded-3">
+					<h2 class="accordion-header" id="faq-heading-3">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+							Is TTL safe to use? Can I get banned?
+						</button>
+					</h2>
+					<div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">
+							We do our best to ensure the launcher avoids detection and doesn't interfere with sensitive files or anti-cheat systems. However, some games require the Launcher to disable the anti-cheat to get them running (Linux only). So use TTL at your own risk.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item mt-3 border-0 rounded-3">
+					<h2 class="accordion-header" id="faq-heading-4">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
+							What games does TTL support?
+						</button>
+					</h2>
+					<div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">
+							We currently support all HoYoverse games and all KuroGame games.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item mt-3 border-0 rounded-3">
+					<h2 class="accordion-header" id="faq-heading-5">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">
+							Where can I get support or report bugs?
+						</button>
+					</h2>
+					<div id="faq-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">
+							If you have a bug to report or want to request a feature head over to our <a class="text-ttl-hover" href="https://github.com/TwintailTeam/TwintailLauncher/issues" target="_blank">GitHub issues</a> and open an issue with respective tag(s).<br/>
+							If you need support or just want to hangout with community and stay up to date with updates you can join our <a class="text-ttl-hover" href="https://discord.gg/nDMJDwuj7s" target="_blank">Discord server</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="thanks" class="bg-dark bg-gradient text-white p-5 d-none">
+		<div class="container">
+			<div class="d-flex justify-content-center align-items-center mb-4">
+				<h1 class="fw-bold">Special Thanks</h1>
+			</div>
+			<div class="row justify-content-center align-items-center g-4">
+				<div class="col-4 col-sm-3 col-md-2 text-center">
+					<a href="https://signpath.org/about" target="_blank" rel="noopener" title="SignPath Foundation">
+						<img src="https://signpath.org/assets/logo.svg" alt="SignPath Foundation" class="img-fluid rounded p-2">
+					</a>
+				</div>
+				<div class="col-4 col-sm-3 col-md-2 text-center">
+					<a href="javascript:void(0);" target="_blank" rel="noopener" title="...">
+						<img src="https://via.placeholder.com/2x2?text=Logo+2" alt="" class="img-fluid rounded p-2">
+					</a>
+				</div>
+				<div class="col-4 col-sm-3 col-md-2 text-center">
+					<a href="javascript:void(0);" target="_blank" rel="noopener" title="...">
+						<img src="https://via.placeholder.com/2x2?text=Logo+3" alt="" class="img-fluid rounded p-2">
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<footer class="bg-dark text-light py-4">
+		<div class="container">
+			<div class="row gy-4">
+				<div class="col-12 col-md-4">
+					<h5 class="mb-3">About TTL</h5>
+					<p>A multi-platform launcher for your anime games</p>
+				</div>
+				<div class="col-6 col-md-2">
+					<h5 class="mb-3">Quick Links</h5>
+					<ul class="list-unstyled">
+						<li><a href="#main" class="text-ttl-hover text-decoration-none">Download</a></li>
+						<li><a href="#features" class="text-ttl-hover text-decoration-none">Features</a></li>
+						<li><a href="#faq" class="text-ttl-hover text-decoration-none">FAQ</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md-2">
+					<h5 class="mb-3">Resources</h5>
+					<ul class="list-unstyled">
+						<li><a href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" class="text-ttl-hover text-decoration-none">GitHub</a></li>
+						<li><a href="https://discord.gg/nDMJDwuj7s" target="_blank" class="text-ttl-hover text-decoration-none">Discord</a></li>
+						<li><a href="/privacy" class="text-ttl-hover text-decoration-none">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4 text-md-end"></div>
+			</div>
+			<hr class="border-light mt-4">
+			<div class="text-center small">
+				TwintailTeam & Contributors &copy; 2025
+			</div>
+		</div>
+	</footer>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			// TODO: Query api to get CDN urls
+			const mainBtn = document.getElementById('downloadMainBtn');
+			let text, link;
+			const platform = window.navigator.platform.toLowerCase();
+			if (platform.includes("win") || platform.includes("windows")) {
+				text = 'Download for Windows';
+				link = '/download/windows';
+			} else {
+				text = 'Download for Linux';
+				link = '/download/linux';
+			}
+			mainBtn.innerHTML = `<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path></svg> ${text}`;
+			mainBtn.href = link;
+		});
+	</script>
+	</body>
+</html>

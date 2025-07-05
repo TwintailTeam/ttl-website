@@ -1,0 +1,58 @@
+.text-ttl-hover:hover {
+    color: var(--bs-purple) !important;
+}
+
+.text-ttl {
+    color: var(--bs-purple) !important;
+}
+
+.bg-ttl {
+    background-color: var(--bs-purple) !important;
+}
+
+.background {
+    background-size: cover !important;
+    background-attachment: fixed;
+    height: 680px;
+    display: flex;
+    background: url("../../assets/images/bg_main.png") no-repeat !important;
+}
+
+.btn-ttl {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-purple);
+    --bs-btn-border-color: var(--bs-purple);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #59359a;
+    --bs-btn-hover-border-color: #59359a;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--bs-purple);
+    --bs-btn-active-border-color: var(--bs-purple);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bs-purple);
+    --bs-btn-disabled-border-color: var(--bs-purple);
+}
+
+.accordion-item.rounded-3 {
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.accordion-item.rounded-3 .accordion-button {
+    border-radius: 0 !important;
+    border: none;
+}
+
+.accordion-item.rounded-3 .accordion-collapse {
+    border-radius: 0 0 1rem 1rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(111, 66, 193, 0.15);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 #6f42c1;
+}
