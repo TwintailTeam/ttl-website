@@ -10,13 +10,20 @@
     background-color: var(--bs-purple) !important;
 }
 
-.background {
-    background-size: cover !important;
+.bg-main {
+    background-image: url("../../assets/images/bg_main.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-attachment: fixed;
-    height: 680px;
     width: 100%;
-    display: flex;
-    background: url("../../assets/images/bg_main.png") no-repeat !important;
+    min-height: 680px;
+}
+
+@media (max-width: 768px) {
+    .bg-main {
+        background-attachment: fixed;
+    }
 }
 
 .btn-ttl {
