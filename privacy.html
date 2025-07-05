@@ -59,9 +59,13 @@
 										<span class="visually-hidden">Toggle Dropdown</span>
 									</button>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="/download/linux"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
-											Linux</a></li>
-										<li><a class="dropdown-item" href="/download/windows"><img src="assets/images/windows.png" alt="" width="16" height="16" class="d-inline-block">
+										<li><a class="dropdown-item" href="https://flathub.org/apps/app.twintaillauncher.ttl"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
+											Flatpak</a></li>
+										<li><a class="dropdown-item" href="https://aur.archlinux.org/packages/twintaillauncher-git"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
+											AUR (git)</a></li>
+										<li><a class="dropdown-item" href="https://aur.archlinux.org/packages/twintaillauncher-bin"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
+											AUR (bin)</a></li>
+										<li><a class="dropdown-item" href="https://github.com/TwintailTeam/TwintailLauncher/releases/latest"><img src="assets/images/windows.png" alt="" width="16" height="16" class="d-inline-block">
 											Windows</a></li>
 									</ul>
 								</div>
@@ -118,16 +122,15 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-			// TODO: Query api to get CDN urls
 			const mainBtn = document.getElementById('downloadMainBtn');
 			let text, link;
 			const platform = window.navigator.platform.toLowerCase();
 			if (platform.includes("win") || platform.includes("windows")) {
 				text = 'Download for Windows';
-				link = '/download/windows';
+				link = 'https://github.com/TwintailTeam/TwintailLauncher/releases/latest';
 			} else {
 				text = 'Download for Linux';
-				link = '/download/linux';
+				link = 'https://flathub.org/apps/app.twintaillauncher.ttl';
 			}
 			mainBtn.innerHTML = `<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path></svg> ${text}`;
 			mainBtn.href = link;
