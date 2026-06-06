@@ -1,5 +1,5 @@
 /* =========================================================
-   Twintail Launcher — site interactions
+   Twintail Launcher site interactions
    ========================================================= */
 (function () {
 	"use strict";
@@ -38,7 +38,7 @@
 	if (mainBtn) {
 		const label = $(".dl-label", mainBtn);
 		if (detectWindows()) {
-			// Windows is distributed via winget only — send users to the download
+			// Windows is distributed via winget only. Send users to the download
 			// section so they get the install command.
 			mainBtn.href = "#download";
 			if (label) label.textContent = "Download for Windows";
@@ -244,7 +244,7 @@
 
 		try {
 			// Stats are refreshed server-side by a scheduled GitHub Action and
-			// committed to this file, so the page reads them same-origin — no
+				// committed to this file, so the page reads them same-origin. No
 			// cross-origin requests, no CORS failures, no API rate limits.
 			const stats = await fetchJson("assets/data/stats.json");
 			const data = {

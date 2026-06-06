@@ -1,18 +1,18 @@
 # ttl-website
 
-The marketing site for [Twintail Launcher](https://github.com/TwintailTeam/TwintailLauncher) — a free,
-open-source, multi-platform launcher for your anime games.
+The marketing site for [Twintail Launcher](https://github.com/TwintailTeam/TwintailLauncher), a free,
+open-source launcher for anime games on Windows and Linux.
 
 ## Stack
 
 This is a fully static, dependency-free site (no build step, no framework):
 
-- `index.html` — landing page
-- `privacy.html` — privacy policy (served at `/privacy`)
-- `assets/css/style.css` — custom design system (dark theme, violet/fuchsia accent)
-- `assets/js/main.js` — nav, mobile menu, OS-aware download button, download tabs,
+- `index.html`: landing page
+- `privacy.html`: privacy policy (served at `/privacy`)
+- `assets/css/style.css`: custom design system (dark theme, violet/fuchsia accent)
+- `assets/js/main.js`: nav, mobile menu, OS-aware download button, download tabs,
   copy-to-clipboard, FAQ accordion, screenshot lightbox, scroll-reveal
-- `assets/images/` — logo, hero background, optimized launcher screenshots
+- `assets/images/`: logo, hero background, optimized launcher screenshots
 
 ## Running locally
 
@@ -32,7 +32,7 @@ For production, serve the static files behind a reverse proxy (e.g. nginx) and m
 
 ## Notes
 
-- No external CSS/JS frameworks or font CDNs are loaded — fitting the project's
+- No external CSS/JS frameworks or font CDNs are loaded, matching the project's
   privacy-first, zero-telemetry stance.
 - Screenshots in `assets/images/screenshots/` are downscaled/compressed JPEGs sourced
   from the launcher repository.

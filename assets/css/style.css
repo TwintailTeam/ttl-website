@@ -1,5 +1,5 @@
 /* =========================================================
-   Twintail Launcher — modern site styles
+   Twintail Launcher site styles
    ========================================================= */
 
 :root {
@@ -170,7 +170,7 @@ body::before {
 }
 .nav-links a.link:hover { color: var(--text); background: var(--surface); }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
-/* tighter button in the header — the big hero glow looks odd at this size */
+/* tighter button in the header; the big hero glow looks odd at this size */
 .nav-actions .btn-primary { box-shadow: 0 8px 16px -12px rgba(124, 58, 237, 0.55); }
 .nav-actions .btn-primary:hover { box-shadow: 0 12px 20px -12px rgba(124, 58, 237, 0.7); transform: translateY(-1px); }
 
@@ -570,7 +570,7 @@ html.reveal-on .reveal:not(.in) { opacity: 0; transform: translateY(26px); }
 }
 .tabs.has-indicator .tab.active { border-bottom-color: transparent; }
 
-/* continuous, subtle motion — only when the user allows it */
+/* continuous, subtle motion when the user allows it */
 @media (prefers-reduced-motion: no-preference) {
 	body::before { animation: auroraDrift 28s ease-in-out infinite alternate; will-change: transform; }
 	.hero-shot { animation: heroFloat 6.5s ease-in-out infinite; }
