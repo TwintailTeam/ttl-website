@@ -416,6 +416,10 @@ body::before {
 .cmd--block { align-items: center; }
 .cmd--block .cmd-lines { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
 .cmd--block .cmd-lines code { display: block; flex: none; width: 100%; }
+
+/* stacked alternative commands, each with its own copy button */
+.cmd-stack { flex: 1 1 320px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.cmd-stack .cmd { flex: none; width: 100%; }
 .copy-btn {
 	flex: 0 0 auto; background: var(--surface-2); border: 1px solid var(--border-strong);
 	border-radius: 8px; color: var(--muted); cursor: pointer; padding: 6px; display: grid; place-items: center;
