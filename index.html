@@ -1,259 +1,395 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="color-scheme" content="dark">
-		<meta name="description" content="A multi-platform launcher for your anime games">
-		<meta name="author" content="TwintailTeam & Contributors">
-		<meta name="theme-color" content="#12e438">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="Twintail Launcher">
-		<meta property="og:url" content="https://twintaillauncher.app">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="dark">
+	<meta name="theme-color" content="#7c3aed">
+	<meta name="description" content="Twintail Launcher (TTL) is a free, open-source, multi-platform launcher to download, manage and play your favorite anime games on Windows and Linux — with mod support, FPS unlocking and zero telemetry.">
+	<meta name="author" content="TwintailTeam & Contributors">
+	<meta name="keywords" content="Twintail Launcher, TTL, anime game launcher, Linux anime games, Genshin Linux, Honkai Star Rail Linux, Wuthering Waves launcher, mod support, FPS unlock">
 
-		<link rel="icon" href="assets/images/logo.png" type="image/png">
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/custom.css">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Twintail Launcher — your anime games, one launcher">
+	<meta property="og:description" content="Free, open-source, multi-platform launcher for your anime games. Download, mod and play on Windows and Linux.">
+	<meta property="og:url" content="https://twintaillauncher.app">
+	<meta property="og:image" content="https://twintaillauncher.app/assets/images/logo.png">
 
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="https://twintaillauncher.app">
-		<meta name="twitter:title" content="Twintail Launcher">
-		<meta name="twitter:description" content="A multi-platform launcher for your anime games">
-		<title>Twintail Launcher</title>
-	</head>
-	<body>
-	<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary navbar-dark">
-		<div class="container-fluid">
-			<a class="navbar-brand fw-bolder" href="javascript:void(0);">
-				<img src="assets/images/logo.png" alt="" width="32" height="32" class="d-inline-block align-text-top">
-				<span class="text-ttl">Twintail</span> Launcher
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="https://twintaillauncher.app">
+	<meta name="twitter:title" content="Twintail Launcher — your anime games, one launcher">
+	<meta name="twitter:description" content="Free, open-source, multi-platform launcher for your anime games. Download, mod and play on Windows and Linux.">
+
+	<link rel="icon" href="assets/images/logo.png" type="image/png">
+	<link rel="preload" as="image" href="assets/images/bg_main.png">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<title>Twintail Launcher — your anime games, one launcher</title>
+</head>
+<body>
+
+	<!-- ============ NAV ============ -->
+	<header class="nav">
+		<div class="container">
+			<a class="brand" href="#top">
+				<img src="assets/images/logo.png" alt="Twintail Launcher logo">
+				<span><span class="gradient-text">Twintail</span> Launcher</span>
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-			<div class="collapse navbar-collapse" id="navbar">
-				<div class="navbar-nav">
-					<a class="nav-link text-ttl-hover" aria-current="page" href="javascript:void(0);">Home</a>
-					<a class="nav-link text-ttl-hover" href="#main">Download</a>
-					<a class="nav-link text-ttl-hover" href="#features">Features</a>
-					<a class="nav-link text-ttl-hover" href="#faq">FAQ</a>
-					<a class="nav-link text-ttl-hover" href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank">GitHub</a>
-					<a class="nav-link text-ttl-hover" href="https://discord.gg/nDMJDwuj7s" target="_blank">Discord</a>
+			<nav class="nav-links" aria-label="Primary">
+				<a class="link" href="#features">Features</a>
+				<a class="link" href="#games">Games</a>
+				<a class="link" href="#screenshots">Screenshots</a>
+				<a class="link" href="#download">Download</a>
+				<a class="link" href="#faq">FAQ</a>
+				<a class="link" href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" rel="noopener">GitHub</a>
+			</nav>
+			<div class="nav-actions">
+				<a class="btn btn-primary btn-sm" href="#download">Download</a>
+			</div>
+			<button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">	
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+			</button>
+		</div>
+	</header>
+	<div class="mobile-menu">
+		<a class="link" href="#features">Features</a>
+		<a class="link" href="#games">Games</a>
+		<a class="link" href="#screenshots">Screenshots</a>
+		<a class="link" href="#download">Download</a>
+		<a class="link" href="#faq">FAQ</a>
+		<a class="link" href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" rel="noopener">GitHub</a>
+		<a class="link" href="https://discord.gg/nDMJDwuj7s" target="_blank" rel="noopener">Discord</a>
+		<a class="btn btn-primary" href="#download">Download</a>
+	</div>
+
+	<span id="top"></span>
+
+	<!-- ============ HERO ============ -->
+	<section class="hero">
+		<div class="hero-bg"></div>
+		<div class="container">
+			<div class="hero-grid">
+				<div class="hero-copy">
+					<span class="eyebrow">Free &amp; open source · Windows &amp; Linux</span>
+					<h1>Your anime games,<br><span class="gradient-text">one launcher.</span></h1>
+					<p class="lead">Twintail Launcher downloads, manages, mods and launches your favorite anime games — all from one clean, fast desktop app. No accounts. No telemetry. Ever.</p>
+					<div class="hero-cta">
+						<a id="downloadMainBtn" class="btn btn-primary btn-lg" href="#download">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+							<span class="dl-label">Download</span>
+						</a>
+						<a class="btn btn-ghost btn-lg" href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" rel="noopener">
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.29 0 .32.21.7.82.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+							Star on GitHub
+						</a>
+					</div>
+					<div class="platform-note">
+						<span><b>Windows</b> · winget</span>
+						<span class="dot"></span>
+						<span><b>Linux</b> · Flatpak, AUR, COPR</span>
+					</div>
+				</div>
+				<div class="hero-shot">
+					<img src="assets/images/screenshots/pic01.png" alt="Twintail Launcher game library showing Genshin Impact ready to install" width="1282" height="752" fetchpriority="high">
 				</div>
 			</div>
 		</div>
-	</nav>
-	<div class="container-fluid d-flex justify-content-center align-items-center bg-main" id="main">
-			<div class="container-fluid d-flex justify-content-center align-items-center">
-				<div class="row justify-content-center w-100">
-					<div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex flex-column">
-						<div class="d-flex flex-column align-items-center justify-content-center w-100">
-							<h1 class="mb-3 fw-bold"><span class="text-ttl">Twintail</span> Launcher</h1>
-							<h5 class="mb-3">A multi-platform launcher for your anime games</h5>
-							<div class="d-flex align-items-center">
-								<div class="btn-group me-3">
-									<a id="downloadMainBtn" href="javascript:void(0);" class="btn btn-lg btn-ttl" role="button">
-										<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path></svg>
-										Download
-									</a>
-									<button type="button" class="btn btn-lg btn-ttl dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-										<span class="visually-hidden">Toggle Dropdown</span>
-									</button>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="https://flathub.org/apps/app.twintaillauncher.ttl"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
-											Flatpak</a></li>
-										<li><a class="dropdown-item" href="https://aur.archlinux.org/packages/twintaillauncher-git"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
-											AUR (git)</a></li>
-										<li><a class="dropdown-item" href="https://aur.archlinux.org/packages/twintaillauncher-bin"><img src="assets/images/linux.png" alt="" width="16" height="16" class="d-inline-block">
-											AUR (bin)</a></li>
-										<li><a class="dropdown-item" href="https://github.com/TwintailTeam/TwintailLauncher/releases/latest"><img src="assets/images/windows.png" alt="" width="16" height="16" class="d-inline-block">
-											Windows</a></li>
-									</ul>
+	</section>
+
+	<!-- ============ STATS ============ -->
+	<section class="section--tight">
+		<div class="container">
+			<div class="stats reveal" aria-label="Project stats">
+				<div class="stat"><div class="num gradient-text" data-stat="supported-games">9</div><div class="label">Supported games</div></div>
+				<div class="stat"><div class="num gradient-text" data-stat="github-stars">400+</div><div class="label">Stars on GitHub</div></div>
+				<div class="stat"><div class="num gradient-text" data-stat="flathub-monthly">4.4k</div><div class="label">Flathub installs/month</div></div>
+				<div class="stat"><div class="num gradient-text" data-stat="flathub-total">42k</div><div class="label">Total Flathub installs</div></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ FEATURES ============ -->
+	<section class="section" id="features">
+		<div class="container">
+			<div class="section-head reveal">
+				<span class="eyebrow">Features</span>
+				<h2>Everything you need to play</h2>
+				<p>One launcher that handles downloads, updates, mods and tweaks — so you can spend your time playing, not configuring.</p>
+			</div>
+			<div class="features-grid">
+				<article class="feature reveal">
+					<div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+					<h3>Truly multi-platform</h3>
+					<p>Native builds for both Windows and Linux give you the same seamless experience no matter your OS — packaged for winget, Flatpak, AUR and COPR.</p>
+				</article>
+				<article class="feature reveal">
+					<div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div>
+					<h3>Mod support &amp; QoL</h3>
+					<p>Optional XXMI integration brings mod support to supported titles, plus quality-of-life extras like FPS unlocking — all toggled with a single click.</p>
+				</article>
+				<article class="feature reveal">
+					<div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+					<h3>Advanced configuration</h3>
+					<p>Set environment variables, pre-launch commands, extra game arguments and more. The launcher never gets in your way — power users stay in control.</p>
+				</article>
+				<article class="feature reveal">
+					<div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+					<h3>Smart download manager</h3>
+					<p>Queue installs and updates, watch live network throughput and disk usage, and let efficient binary patching keep your games up to date with minimal downloads.</p>
+				</article>
+				<article class="feature reveal">
+					<div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+					<h3>Private by design</h3>
+					<p>Twintail Launcher collects no telemetry and logs nothing — and never will. Your library and play habits stay entirely on your machine.</p>
+				</article>
+				<article class="feature reveal">
+					<div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+					<h3>Free &amp; open source</h3>
+					<p>Built with Tauri, Rust and TypeScript and licensed under GPL-3.0. Read every line, file issues, or contribute — TTL will always be free.</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ GAMES ============ -->
+	<section class="section" id="games">
+		<div class="container">
+			<div class="section-head reveal">
+				<span class="eyebrow">Game support</span>
+				<h2>All your favorites, supported</h2>
+				<p>Full support for every current HoYoverse and Kuro Games title — and several more beyond.</p>
+			</div>
+			<div class="games-grid">
+				<div class="game-card reveal"><span class="ico" data-manifest="hk4e_global.json" aria-hidden="true">GI</span><div class="meta"><b>Genshin Impact</b><span>HoYoverse</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="hkrpg_global.json" aria-hidden="true">HSR</span><div class="meta"><b>Honkai: Star Rail</b><span>HoYoverse</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="bh3_global.json" aria-hidden="true">HI3</span><div class="meta"><b>Honkai Impact 3rd</b><span>HoYoverse</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="nap_global.json" aria-hidden="true">ZZZ</span><div class="meta"><b>Zenless Zone Zero</b><span>HoYoverse</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="wuwa_global.json" aria-hidden="true">WW</span><div class="meta"><b>Wuthering Waves</b><span>Kuro Games</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="pgr_global.json" aria-hidden="true">PGR</span><div class="meta"><b>Punishing: Gray Raven</b><span>Kuro Games</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="aethergazer_global.json" aria-hidden="true">AG</span><div class="meta"><b>Aether Gazer</b><span>Yostar</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="endfield_global.json" aria-hidden="true">AE</span><div class="meta"><b>Arknights: Endfield</b><span>Hypergryph</span></div></div>
+				<div class="game-card reveal"><span class="ico" data-manifest="sdsgc_global.json" aria-hidden="true">7DS</span><div class="meta"><b>7DS: Grand Cross</b><span>Netmarble</span></div></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ SCREENSHOTS ============ -->
+	<section class="section" id="screenshots">
+		<div class="container">
+			<div class="section-head reveal">
+				<span class="eyebrow">A look inside</span>
+				<h2>Polished, fast, out of your way</h2>
+				<p>A clean interface that makes downloading, updating and launching effortless. Click any shot to enlarge.</p>
+			</div>
+			<div class="gallery">
+				<figure class="reveal"><img src="assets/images/screenshots/pic01.png" alt="Game library with Genshin Impact selected" loading="lazy"><figcaption>Browse and install your library</figcaption></figure>
+				<figure class="reveal"><img src="assets/images/screenshots/pic02.png" alt="Zenless Zone Zero ready to launch" loading="lazy"><figcaption>One click to play</figcaption></figure>
+				<figure class="reveal"><img src="assets/images/screenshots/pic06.png" alt="Download manager with live network and disk stats" loading="lazy"><figcaption>Live download manager</figcaption></figure>
+				<figure class="reveal"><img src="assets/images/screenshots/pic08.png" alt="Add installation dialog with advanced options" loading="lazy"><figcaption>Fine-grained install options</figcaption></figure>
+				<figure class="reveal"><img src="assets/images/screenshots/pic03.png" alt="Punishing Gray Raven update screen" loading="lazy"><figcaption>Effortless updates</figcaption></figure>
+				<figure class="reveal"><img src="assets/images/screenshots/pic09.png" alt="Launcher settings and about screen" loading="lazy"><figcaption>Configurable to the core</figcaption></figure>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ DOWNLOAD ============ -->
+	<section class="section" id="download">
+		<div class="container">
+			<div class="section-head reveal">
+				<span class="eyebrow">Download</span>
+				<h2>Get Twintail Launcher</h2>
+				<p>Pick your platform and install method. Always 100% free.</p>
+			</div>
+			<div class="download-wrap reveal">
+				<div class="tabs" role="tablist">
+					<button class="tab active" data-target="panel-windows" role="tab">
+						<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+						Windows
+					</button>
+					<button class="tab" data-target="panel-linux" role="tab">
+						<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 01-.018-.2v-.02a1.772 1.772 0 01.15-.768c.082-.22.232-.406.43-.533a.985.985 0 01.594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 00-.166-.267.248.248 0 00-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 00-.12.27.944.944 0 00-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 01-.131.068 2.62 2.62 0 01-.275-.402 1.772 1.772 0 01-.155-.667 1.759 1.759 0 01.08-.668 1.43 1.43 0 01.283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 01.016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 01-.448-.067 3.566 3.566 0 01-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.645 2.645 0 00-.402-.533 1.45 1.45 0 00-.275-.333c.182 0 .338-.03.465-.067a.615.615 0 00.314-.334c.108-.267 0-.697-.345-1.163-.345-.467-.931-.995-1.788-1.521-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.123 8.123 0 01.647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335.039.003.075.006.11.006.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01c.053 0 .105.005.157.014.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602-.369-.066-.61-.2-.723-.4-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336zm7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8.097 8.097 0 01-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065zm-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></svg>
+						Linux
+					</button>
+				</div>
+
+				<!-- Windows -->
+				<div class="tab-panel active" id="panel-windows" role="tabpanel">
+					<div class="dl-list">
+						<div class="dl-item">
+							<div class="dl-info"><b>winget</b><span>Install &amp; update via the Windows Package Manager</span></div>
+							<div class="cmd">
+								<span class="prompt">&gt;</span><code>winget install TwintailLauncher</code>
+								<button class="copy-btn" data-copy="winget install TwintailLauncher" aria-label="Copy command">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Linux -->
+				<div class="tab-panel" id="panel-linux" role="tabpanel">
+					<div class="dl-list">
+						<div class="dl-item">
+							<div class="dl-info"><b>Flatpak (Flathub)</b><span>Works on any distro</span></div>
+							<div class="cmd">
+								<span class="prompt">$</span><code>flatpak install flathub app.twintaillauncher.ttl</code>
+								<button class="copy-btn" data-copy="flatpak install flathub app.twintaillauncher.ttl" aria-label="Copy command">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+								</button>
+							</div>
+						</div>
+						<div class="dl-item">
+							<div class="dl-info"><b>Arch (AUR)</b><span>twintaillauncher · -git · -bin</span></div>
+							<div class="cmd">
+								<span class="prompt">$</span><code>yay -S twintaillauncher-bin</code>
+								<button class="copy-btn" data-copy="yay -S twintaillauncher-bin" aria-label="Copy command">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+								</button>
+							</div>
+						</div>
+						<div class="dl-item">
+							<div class="dl-info"><b>Fedora (COPR)</b><span>Enable the repo, then install</span></div>
+							<div class="cmd cmd--block">
+								<div class="cmd-lines">
+									<code><span class="prompt">$</span> sudo dnf copr enable tukandev/TwintailLauncher</code>
+									<code><span class="prompt">$</span> sudo dnf install twintaillauncher</code>
 								</div>
-								<a href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" class="btn btn-lg btn-secondary">
-									<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
-									GitHub</a>
+								<button class="copy-btn" data-copy="sudo dnf copr enable tukandev/TwintailLauncher&#10;sudo dnf install twintaillauncher" aria-label="Copy commands">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-	</div>
-	<div id="features" class="bg-ttl bg-gradient text-white p-5">
-		<div class="container">
-			<div class="d-flex justify-content-center align-items-center mb-4">
-				<h1 class="fw-bold">Features</h1>
-			</div>
-			<div class="row g-4 justify-content-center">
-				<div class="col-12 col-sm-6 col-lg-4">
-					<div class="card h-100 border-0 bg-opacity-75 bg-transparent">
-						<div class="card-body text-center">
-							<h5 class="card-title fw-bold">Multi platform</h5>
-							<p class="card-text">TTL supports both Linux and Windows, providing you seamless experience regardless of your Operating System!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-lg-4">
-					<div class="card h-100 border-0 bg-opacity-75 bg-transparent">
-						<div class="card-body text-center">
-							<h5 class="card-title fw-bold">Mod support & QoL</h5>
-							<p class="card-text">TTL comes bundled with optional support for using mods for certain set of our supported games (enable "XXMI" to use) while also adding Quality of Life features such as FPS Unlocking!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-lg-4">
-					<div class="card h-100 border-0 bg-opacity-75 bg-transparent">
-						<div class="card-body text-center">
-							<h5 class="card-title fw-bold">Advanced configs</h5>
-							<p class="card-text">Control and set your environment variables, prelaunch commands, additional game arguments and more, launcher does not restrict you!</p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
-	</div>
-	<div id="faq" class="bg-ttl text-white p-5">
-		<div class="container">
-			<div class="d-flex justify-content-center align-items-center mb-4">
-				<h1 class="fw-bold">FAQ</h1>
-			</div>
-			<div class="accordion" id="faqAccordion">
-				<div class="accordion-item border-0 rounded-3">
-					<h2 class="accordion-header" id="faq-heading-1">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
-							What platforms does TTL support?
-						</button>
-					</h2>
-					<div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordion">
-						<div class="accordion-body">
-							We currently support Linux and Windows only. Maybe in the future we add support of macOS.
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item mt-3 border-0 rounded-3">
-					<h2 class="accordion-header" id="faq-heading-2">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
-							Is TTL free to use?
-						</button>
-					</h2>
-					<div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordion">
-						<div class="accordion-body">
-							TTL is free and open source application and will never be paid software. You can check and give it a star on <a class="text-ttl-hover" href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank">GitHub</a>
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item mt-3 border-0 rounded-3">
-					<h2 class="accordion-header" id="faq-heading-3">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
-							Is TTL safe to use? Can I get banned?
-						</button>
-					</h2>
-					<div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordion">
-						<div class="accordion-body">
-							We do our best to ensure the launcher avoids detection and doesn't interfere with sensitive files or anti-cheat systems. However, some games require the Launcher to disable the anti-cheat to get them running (Linux only). So use TTL at your own risk.
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item mt-3 border-0 rounded-3">
-					<h2 class="accordion-header" id="faq-heading-4">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
-							What games does TTL support?
-						</button>
-					</h2>
-					<div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faqAccordion">
-						<div class="accordion-body">
-							We currently support all HoYoverse games and all KuroGame games.
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item mt-3 border-0 rounded-3">
-					<h2 class="accordion-header" id="faq-heading-5">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">
-							Where can I get support or submit bug reports?
-						</button>
-					</h2>
-					<div id="faq-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5" data-bs-parent="#faqAccordion">
-						<div class="accordion-body">
-							If you have a bug to report or want to request a feature head over to our <a class="text-ttl-hover" href="https://github.com/TwintailTeam/TwintailLauncher/issues" target="_blank">GitHub issues</a> and open an issue with respective tag(s).<br/>
-							If you need support or just want to hangout with community and stay up to date with updates you can join our <a class="text-ttl-hover" href="https://discord.gg/nDMJDwuj7s" target="_blank">Discord server</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="sponsors" class="bg-dark bg-gradient text-white p-5">
-		<div class="container">
-			<div class="d-flex justify-content-center align-items-center mb-4">
-				<h1 class="fw-bold">Sponsors</h1>
-			</div>
-			<div class="row justify-content-center align-items-center g-4">
-				<div class="col-4 col-sm-3 col-md-2 text-center">
-					<a href="https://signpath.org/about" target="_blank" rel="noopener" title="SignPath Foundation">
-						<img src="https://signpath.org/assets/logo.svg" alt="SignPath Foundation" class="img-fluid rounded p-2">
-					</a>
-				</div>
-				<div class="col-4 col-sm-3 col-md-2 text-center">
-					<a href="javascript:void(0);" target="_blank" rel="noopener" title="...">
-						<img src="https://via.placeholder.com/2x2?text=Logo+2" alt="" class="img-fluid rounded p-2">
-					</a>
-				</div>
-				<div class="col-4 col-sm-3 col-md-2 text-center">
-					<a href="javascript:void(0);" target="_blank" rel="noopener" title="...">
-						<img src="https://via.placeholder.com/2x2?text=Logo+3" alt="" class="img-fluid rounded p-2">
-					</a>
-				</div>
+	</section>
 
+	<!-- ============ FAQ ============ -->
+	<section class="section" id="faq">
+		<div class="container">
+			<div class="section-head reveal">
+				<span class="eyebrow">FAQ</span>
+				<h2>Frequently asked questions</h2>
+			</div>
+			<div class="faq">
+				<div class="faq-item reveal">
+					<button class="faq-q" aria-expanded="false">What platforms does TTL support?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+					<div class="faq-a"><div class="faq-a-inner">We currently support Linux and Windows. macOS support may come in the future.</div></div>
+				</div>
+				<div class="faq-item reveal">
+					<button class="faq-q" aria-expanded="false">Is TTL free to use?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+					<div class="faq-a"><div class="faq-a-inner">Yes. TTL is a free and open-source application and will never be paid software. Feel free to give it a star on <a href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" rel="noopener">GitHub</a>.</div></div>
+				</div>
+				<div class="faq-item reveal">
+					<button class="faq-q" aria-expanded="false">Is TTL safe? Can I get banned?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+					<div class="faq-a"><div class="faq-a-inner">We do our best to ensure the launcher avoids detection and doesn't interfere with sensitive files or anti-cheat systems. However, some games require the launcher to disable the anti-cheat to run (Linux only), so use TTL at your own risk.</div></div>
+				</div>
+				<div class="faq-item reveal">
+					<button class="faq-q" aria-expanded="false">What games does TTL support?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+					<div class="faq-a"><div class="faq-a-inner">All current HoYoverse and Kuro Games titles, plus Aether Gazer, Arknights: Endfield and The Seven Deadly Sins: Grand Cross. See the <a href="#games">full list above</a>.</div></div>
+				</div>
+				<div class="faq-item reveal">
+					<button class="faq-q" aria-expanded="false">Does TTL collect any data?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+					<div class="faq-a"><div class="faq-a-inner">No. The launcher collects no telemetry and logs nothing, and never will. Read more in our <a href="/privacy">privacy policy</a>.</div></div>
+				</div>
+				<div class="faq-item reveal">
+					<button class="faq-q" aria-expanded="false">Where can I get support or report bugs?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+					<div class="faq-a"><div class="faq-a-inner">To report a bug or request a feature, open an issue on our <a href="https://github.com/TwintailTeam/TwintailLauncher/issues" target="_blank" rel="noopener">GitHub issues</a> with the relevant tag(s). For support or to hang out with the community, join our <a href="https://discord.gg/nDMJDwuj7s" target="_blank" rel="noopener">Discord server</a>.</div></div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<footer class="bg-dark text-light py-4">
+	</section>
+
+	<!-- ============ SPONSORS ============ -->
+	<section class="section" id="sponsors">
 		<div class="container">
-			<div class="row gy-4">
-				<div class="col-12 col-md-4">
-					<h5 class="mb-3">About TTL</h5>
-					<p>A multi-platform launcher for your anime games</p>
-				</div>
-				<div class="col-6 col-md-2">
-					<h5 class="mb-3">Quick Links</h5>
-					<ul class="list-unstyled">
-						<li><a href="#main" class="text-ttl-hover text-decoration-none">Download</a></li>
-                        <li><a href="#sponsors" class="text-ttl-hover text-decoration-none">Sponsors</a></li>
-						<li><a href="#features" class="text-ttl-hover text-decoration-none">Features</a></li>
-						<li><a href="#faq" class="text-ttl-hover text-decoration-none">FAQ</a></li>
-					</ul>
-				</div>
-				<div class="col-6 col-md-2">
-					<h5 class="mb-3">Resources</h5>
-					<ul class="list-unstyled">
-						<li><a href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" class="text-ttl-hover text-decoration-none">GitHub</a></li>
-						<li><a href="https://discord.gg/nDMJDwuj7s" target="_blank" class="text-ttl-hover text-decoration-none">Discord</a></li>
-						<li><a href="/privacy" class="text-ttl-hover text-decoration-none">Privacy Policy</a></li>
-					</ul>
-				</div>
-				<div class="col-12 col-md-4 text-md-end"></div>
+			<div class="section-head reveal">
+				<span class="eyebrow">Sponsors</span>
+				<h2>Backed by great people</h2>
+				<p>Twintail Launcher is made possible by our sponsors and community supporters.</p>
 			</div>
-			<hr class="border-light mt-4">
-			<div class="text-center small">
-				TwintailTeam & Contributors &copy; 2025
+			<div class="sponsors-row reveal">
+				<a class="sponsor" href="https://signpath.org/about" target="_blank" rel="noopener" title="SignPath Foundation">
+					<img src="https://signpath.org/assets/logo.svg" alt="SignPath Foundation">
+				</a>
+			</div>
+			<p class="sponsor-cta">Want to support the project? Back us on
+				<a class="gradient-text" href="https://opencollective.com/twintaillauncher" target="_blank" rel="noopener" style="font-weight:700">Open Collective</a>,
+				<a class="gradient-text" href="https://ko-fi.com/twintailteam" target="_blank" rel="noopener" style="font-weight:700">Ko-fi</a> or
+				<a class="gradient-text" href="https://liberapay.com/TwintailTeam" target="_blank" rel="noopener" style="font-weight:700">Liberapay</a>.
+			</p>
+		</div>
+	</section>
+
+	<!-- ============ CTA ============ -->
+	<section class="section--tight">
+		<div class="container">
+			<div class="cta-band reveal">
+				<h2>Ready to play?</h2>
+				<p>Download Twintail Launcher and get your anime games running in minutes — on Windows or Linux.</p>
+				<div class="hero-cta">
+					<a class="btn btn-primary btn-lg" href="#download">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+						Download now
+					</a>
+					<a class="btn btn-ghost btn-lg" href="https://discord.gg/nDMJDwuj7s" target="_blank" rel="noopener">Join the Discord</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ FOOTER ============ -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-grid">
+				<div>
+					<div class="brand"><img src="assets/images/logo.png" alt="Twintail Launcher logo"><span><span class="gradient-text">Twintail</span> Launcher</span></div>
+					<p>A free, open-source, multi-platform launcher for your anime games. No accounts, no telemetry.</p>
+					<div class="footer-socials">
+						<a href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.29 0 .32.21.7.82.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg></a>
+						<a href="https://discord.gg/nDMJDwuj7s" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a14 14 0 0 1 4.3 1.4A13.6 13.6 0 0 0 4.5 4.8 14 14 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.4C.7 8.9-.1 13.3.3 17.6a20 20 0 0 0 6 3l.8-1.2c-.7-.3-1.4-.6-2-1l.5-.4a14.3 14.3 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l.8 1.2a20 20 0 0 0 6-3c.5-5-.8-9.4-2.8-13.2zM8.4 15c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg></a>
+					</div>
+				</div>
+				<div>
+					<h5>Product</h5>
+					<ul>
+						<li><a href="#features">Features</a></li>
+						<li><a href="#games">Games</a></li>
+						<li><a href="#screenshots">Screenshots</a></li>
+						<li><a href="#download">Download</a></li>
+					</ul>
+				</div>
+				<div>
+					<h5>Resources</h5>
+					<ul>
+						<li><a href="https://github.com/TwintailTeam/TwintailLauncher" target="_blank" rel="noopener">GitHub</a></li>
+						<li><a href="https://github.com/TwintailTeam/TwintailLauncher/issues" target="_blank" rel="noopener">Report a bug</a></li>
+						<li><a href="https://discord.gg/nDMJDwuj7s" target="_blank" rel="noopener">Discord</a></li>
+						<li><a href="#faq">FAQ</a></li>
+					</ul>
+				</div>
+				<div>
+					<h5>Legal</h5>
+					<ul>
+						<li><a href="/privacy">Privacy Policy</a></li>
+						<li><a href="https://github.com/TwintailTeam/TwintailLauncher/blob/stable/LICENSE" target="_blank" rel="noopener">License (GPL-3.0)</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<a href="https://github.com/TwintailTeam" target="_blank" rel="noopener">TwintailTeam</a> &amp; Contributors &copy; <span id="year">2025</span> · Made with 💜 for the community
 			</div>
 		</div>
 	</footer>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const mainBtn = document.getElementById('downloadMainBtn');
-			let text, link;
-			const platform = window.navigator.platform.toLowerCase();
-			if (platform.includes("win") || platform.includes("windows")) {
-				text = 'Download for Windows';
-				link = 'https://github.com/TwintailTeam/TwintailLauncher/releases/latest';
-			} else {
-				text = 'Download for Linux';
-				link = 'https://flathub.org/apps/app.twintaillauncher.ttl';
-			}
-			mainBtn.innerHTML = `<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path></svg> ${text}`;
-			mainBtn.href = link;
-		});
-	</script>
-	</body>
+
+	<!-- lightbox -->
+	<div class="lightbox" id="lightbox" aria-hidden="true">
+		<button class="close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+		<img alt="">
+	</div>
+
+	<script src="assets/js/main.js?v=20260606-stats-json"></script>
+</body>
 </html>

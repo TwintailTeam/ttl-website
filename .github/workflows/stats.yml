@@ -1,0 +1,83 @@
+name: Refresh project stats
+
+# Fetches GitHub + Flathub stats server-side (no browser CORS limits) and
+# commits the result to assets/data/stats.json, which the site reads
+# same-origin. Keeps the live counters fresh without any runtime third-party
+# calls or API rate-limit exposure.
+
+on:
+  schedule:
+    # Daily at 06:00 UTC.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-stats
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # PAT from the MinlorAssistant bot account so the refresh commit is
+          # pushed and attributed to that account, not github-actions[bot].
+          token: ${{ secrets.STATS_BOT_TOKEN }}
+
+      - name: Fetch stats and write stats.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          repo_json="$(curl -fsSL \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            https://api.github.com/repos/TwintailTeam/TwintailLauncher)"
+          stars="$(jq '.stargazers_count' <<<"$repo_json")"
+
+          flathub_json="$(curl -fsSL \
+            https://flathub.org/api/v2/stats/app.twintaillauncher.ttl)"
+          monthly="$(jq '.installs_last_month' <<<"$flathub_json")"
+          total="$(jq '.installs_total' <<<"$flathub_json")"
+
+          # Bail out if any value is missing/non-numeric so we never overwrite
+          # good data with nulls when an upstream API hiccups.
+          for v in "$stars" "$monthly" "$total"; do
+            case "$v" in
+              ''|*[!0-9]*) echo "Invalid stat value: '$v'" >&2; exit 1 ;;
+            esac
+          done
+
+          updated="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          mkdir -p assets/data
+          jq -n \
+            --argjson stars "$stars" \
+            --argjson monthly "$monthly" \
+            --argjson total "$total" \
+            --arg updated "$updated" \
+            '{
+              githubStars: $stars,
+              flathubMonthlyInstalls: $monthly,
+              flathubTotalInstalls: $total,
+              updatedAt: $updated
+            }' > assets/data/stats.json
+
+          cat assets/data/stats.json
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- assets/data/stats.json; then
+            echo "No stat changes."
+            exit 0
+          fi
+          git config user.name "MinlorAssistant"
+          git config user.email "assistant@minlor.net"
+          git add assets/data/stats.json
+          git commit -m "chore: refresh project stats"
+          git push
