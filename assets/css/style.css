@@ -235,19 +235,13 @@ body::before {
 /* hero screenshot */
 .hero-shot {
 	position: relative;
-	border-radius: 8px;
-	border: 1px solid var(--border-strong);
-	box-shadow: var(--shadow), var(--glow);
+	border-radius: 0;
+	border: 0;
+	box-shadow: none;
 	overflow: hidden;
-	transition: transform .4s ease, box-shadow .4s ease;
+	transition: transform .4s ease;
 }
-.hero-shot:hover { box-shadow: var(--shadow), 0 0 60px -4px rgba(139, 92, 246, 0.8); }
 .hero-shot img { width: 100%; height: auto; display: block; }
-.hero-shot::after {
-	content: ""; position: absolute; inset: 0;
-	background: linear-gradient(120deg, rgba(139,92,246,0.12), transparent 50%);
-	pointer-events: none;
-}
 
 @media (max-width: 920px) {
 	.hero-grid { grid-template-columns: 1fr; gap: 44px; }
@@ -342,11 +336,11 @@ body::before {
 @media (max-width: 720px) { .gallery { grid-template-columns: 1fr; } }
 .gallery figure {
 	margin: 0; position: relative; cursor: zoom-in;
-	border: 1px solid var(--border); border-radius: 8px;
-	overflow: hidden; background: var(--bg-soft);
-	transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+	border: 0; border-radius: 0;
+	overflow: hidden; background: transparent;
+	transition: transform .25s ease;
 }
-.gallery figure:hover { transform: translateY(-4px); border-color: var(--violet); box-shadow: var(--shadow); }
+.gallery figure:hover { transform: translateY(-4px); }
 .gallery img { width: 100%; height: auto; display: block; }
 .gallery figcaption {
 	position: absolute; left: 0; right: 0; bottom: 0;
@@ -361,7 +355,7 @@ body::before {
 	align-items: center; justify-content: center; padding: 30px;
 }
 .lightbox.open { display: flex; }
-.lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 14px; border: 1px solid var(--border-strong); box-shadow: var(--shadow); }
+.lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 0; border: 0; box-shadow: none; }
 .lightbox .close { position: absolute; top: 22px; right: 26px; background: none; border: 0; color: #fff; cursor: pointer; opacity: .8; }
 .lightbox .close svg { width: 34px; height: 34px; }
 .lightbox .close:hover { opacity: 1; }
