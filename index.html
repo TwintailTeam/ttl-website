@@ -251,7 +251,7 @@
 							</div>
 						</div>
 						<div class="dl-item">
-							<div class="dl-info"><b>Arch (AUR)</b><span>twintaillauncher · -git · -bin</span></div>
+							<div class="dl-info"><b>Arch (AUR)</b><span>DEB extract · Stable source build · Unstable source build</span></div>
 							<div class="cmd-stack">
 								<div class="cmd">
 									<span class="prompt">$</span><code>yay -S twintaillauncher-bin</code>
@@ -262,6 +262,30 @@
 								<div class="cmd">
 									<span class="prompt">$</span><code>paru -S twintaillauncher-bin</code>
 									<button class="copy-btn" data-copy="paru -S twintaillauncher-bin" aria-label="Copy paru command">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+									</button>
+								</div>
+								<div class="cmd">
+									<span class="prompt">$</span><code>yay -S twintaillauncher</code>
+									<button class="copy-btn" data-copy="yay -S twintaillauncher" aria-label="Copy yay command">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+									</button>
+								</div>
+								<div class="cmd">
+									<span class="prompt">$</span><code>paru -S twintaillauncher</code>
+									<button class="copy-btn" data-copy="paru -S twintaillauncher" aria-label="Copy paru command">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+									</button>
+								</div>
+								<div class="cmd">
+									<span class="prompt">$</span><code>yay -S twintaillauncher-git</code>
+									<button class="copy-btn" data-copy="yay -S twintaillauncher-git" aria-label="Copy yay command">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+									</button>
+								</div>
+								<div class="cmd">
+									<span class="prompt">$</span><code>paru -S twintaillauncher-git</code>
+									<button class="copy-btn" data-copy="paru -S twintaillauncher-git" aria-label="Copy paru command">
 										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
 									</button>
 								</div>
@@ -289,6 +313,24 @@
 								<button class="copy-btn" data-copy="sudo dnf install terra-release&#10;sudo dnf install twintaillauncher" aria-label="Copy commands">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
 								</button>
+							</div>
+						</div>
+						<div class="dl-item">
+							<div class="dl-info"><b>NixOS (Nix & Nix flakes)</b><span>DEB extract · Stable source build</span></div>
+							<div class="cmd-stack">
+								<div class="cmd">
+									<span class="prompt">$</span><code>https://github.com/axioncs/twintaillauncher-flake#usage</code>
+									<button class="copy-btn" data-copy="{&#10;  inputs.twintaillauncher = {&#10;    url = &quot;github:axioncs/twintaillauncher-flake&quot;;&#10;    inputs.nixpkgs.follows = &quot;nixpkgs&quot;;&#10;  };&#10;}&#10;home.packages = [ inputs.twintaillauncher.packages.${pkgs.stdenv.hostPlatform.system}.default ];"
+											aria-label="Copy Nix configuration">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+									</button>
+								</div>
+								<div class="cmd">
+									<span class="prompt">$</span><code>https://github.com/Yuna404/TwintailFlake#install-it</code>
+									<button class="copy-btn" data-copy='inputs.twintail = {&#10;  url = "github:Yuna404/TwintailFlake";&#10;  inputs.nixpkgs.follows = "nixpkgs";&#10;};&#10;inputs.twintail.packages.${pkgs.stdenv.hostPlatform.system}.default' aria-label="Copy Nix configuration">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
